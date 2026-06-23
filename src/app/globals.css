@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────────────────
+   THEME TOKENS (Tailwind v4)
+   These generate utilities like bg-pump, text-gold, border-royal, etc.
+   ────────────────────────────────────────────────────────── */
+@theme {
+  --color-royal: #16335f;
+  --color-royal-deep: #0a1830;
+  --color-gold: #c9a227;
+  --color-gold-bright: #f0d469;
+  --color-parchment: #efe6cf;
+  --color-stone: #6a6356;
+  --color-pump: #86efac;
+
+  --font-display: var(--font-cinzel), "Cinzel", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* numeric font-weight utilities used in markup (font-600, font-700, etc.) */
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-900: 900;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-royal-deep);
+  color: var(--color-parchment);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* single-viewport site — keep it locked to 100vh */
+  overflow: hidden;
+}
+
+/* let the Cinzel variable drive the display font utility */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* gilded gold text — used on the title + ticker */
+.text-gilt {
+  background: linear-gradient(180deg, #fbeeb0 0%, #e3c14e 45%, #c9a227 65%, #9c7c1c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* faint medieval parchment/stone texture over the background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(201, 162, 39, 0.05) 0 1px, transparent 1px),
+    radial-gradient(circle at 72% 64%, rgba(201, 162, 39, 0.04) 0 1px, transparent 1px);
+  background-size: 10px 10px, 14px 14px;
+}
+
+/* hide any stray scrollbar for the locked single screen */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
