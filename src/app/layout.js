@@ -59,7 +59,7 @@ export const metadata = {
       "Rally the empire. The $AOE4 meme coin marches on Solana — launched on pump.fun.",
     images: [
       {
-        url: "/og.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Age of Empires IV on Solana — $AOE4",
@@ -71,7 +71,7 @@ export const metadata = {
     title: "Age of Empires IV on Solana | $AOE4",
     description:
       "Rally the empire. The $AOE4 meme coin marches on Solana — launched on pump.fun.",
-    images: ["/og.png"],
+    images: ["/og-image.jpg"],
     creator: "@aoe4onsol",
   },
   robots: {
