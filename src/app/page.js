@@ -5,7 +5,7 @@ import { useState } from "react";
 /* ──────────────────────────────────────────────────────────
    EDIT THESE ── drop in your real mint + socials
    ────────────────────────────────────────────────────────── */
-const CONTRACT_ADDRESS = "UPDATING";
+const CONTRACT_ADDRESS = "Gf8B22rvbD9ZtgsWe8Uoc3wiXXwXXjYX7Q8eQRdfpump";
 const PUMP_URL = `https://pump.fun/coin/${CONTRACT_ADDRESS}`;
 const TICKER = "$AOE4";
 const X_URL = "https://x.com/aoe4sol";
