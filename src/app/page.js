@@ -8,7 +8,7 @@ import { useState } from "react";
 const CONTRACT_ADDRESS = "UPDATING";
 const PUMP_URL = `https://pump.fun/coin/${CONTRACT_ADDRESS}`;
 const TICKER = "$AOE4";
-const X_URL = "https://x.com/aoe4onsol";
+const X_URL = "https://x.com/aoe4sol";
 const TELEGRAM_URL = "https://t.me/";
 const PUMP_LOGO = "https://pump.fun/pump-logomark.svg";
 const PUMP_GREEN = "#86efac";
@@ -154,17 +154,6 @@ export default function Home() {
             </svg>
           </a>
 
-          <a
-            href={TELEGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-12 w-12 items-center justify-center rounded-md border border-gold/40 bg-black/30 text-parchment/90 backdrop-blur transition hover:border-pump hover:text-pump"
-            aria-label="Telegram"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-              <path d="M21.94 4.61l-3.32 15.66c-.25 1.1-.9 1.37-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.15L18.4 6.2c.4-.36-.09-.56-.62-.2L5.4 13.84l-5.07-1.59C-.77 11.93-.8 10.84.78 10.2l20.34-7.84c.94-.34 1.76.22 1.45 2.25z" />
-            </svg>
-          </a>
         </div>
       </section>
 
